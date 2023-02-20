@@ -1,0 +1,32 @@
+GET http://localhost:5121/recipes
+
+###
+GET http://localhost:5121/recipes/1
+
+###
+GET http://localhost:5121/recipes/search/Eggs
+
+###
+POST http://localhost:5121/recipes
+Content-Type: application/json
+
+{
+    "Title": "Fried Eggs",
+    "Description": "A very simple meal, but very tasty.",
+    "Ingredients": ["Eggs", "Salt", "Oil"],
+    "TitleImage": "https://static8.depositphotos.com/1078289/811/i/950/depositphotos_8110801-stock-photo-fried-egg-on-a-white.jpg"
+}
+
+###
+DELETE http://localhost:5121/recipes/1
+
+###
+PUT  http://localhost:5121/recipes/1
+Content-Type: application/json
+
+{
+    "Title": "Honey Cake",
+    "Description": "A cake with honey. Very tasty.",
+    "Ingredients": ["Honey", "Sugar", "Cream", "Flour", "Eggs", "Baking Powder"],
+    "TitleImage": "https://www.shutterstock.com/image-photo/honey-cake-dessert-square-isolated-600w-2087968306.jpg"
+}
